@@ -59,9 +59,10 @@ while (file_exists($filename)) {
 	$x++;
 	$filename = './blogs/blog' . $x . '.php';
 }
-for ($x; $x>=0; $x--) {
+for ($i=0; $i<=5; $i++) {
 	$filename = './blogs/blog' . $x . '.php';
 	include $filename;
+	$x--;
 }
 ?>
 </section>
