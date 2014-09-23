@@ -59,11 +59,9 @@ while (file_exists($filename)) {
 	$x++;
 	$filename = './blogs/blog' . $x . '.php';
 }
-for ($i=0; $i<=5; $i++) {
+for ($x-=1; $x>=0; $x--) {
 	$filename = './blogs/blog' . $x . '.php';
-	include $filename;
-	$x--;
-	echo '<hr />';
+	echo '<a href="./blogs/blog' . $x . '.php"><p>Blog ' . $x . '</p></a>';
 }
 ?>
 <a href="oldnews.php"><p>Old News</p></a>
