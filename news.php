@@ -54,13 +54,17 @@
 <h2>News</h2>
 <?php
 $filename = './blogs/blog0.php';
+$titlefile = './blogs/titles/title0.php';
 $x = 0;
 while (file_exists($filename)) {
 	$x++;
 	$filename = './blogs/blog' . $x . '.php';
+	$titlefile = './blogs/titles/title' . $x . '.php';
 }
 for ($i=0; $i<=5; $i++) {
 	$filename = './blogs/blog' . $x . '.php';
+	$titlefile = './blogs/titles/title' . $x . '.php';
+	include $titlefile;
 	include $filename;
 	$x--;
 	echo '<hr />';

@@ -53,15 +53,15 @@
 <section>
 <h2>News</h2>
 <?php
-$filename = './blogs/blog0.php';
+$filename = './blogs/titles/title0.php';
 $x = 0;
 while (file_exists($filename)) {
 	$x++;
-	$filename = './blogs/blog' . $x . '.php';
+	$filename = './blogs/titles/title' . $x . '.php';
 }
 for ($x-=1; $x>=0; $x--) {
-	$filename = './blogs/blog' . $x . '.php';
-	echo '<a href="./blogs/blog' . $x . '.php"><p>Blog ' . $x . '</p></a>';
+	$filename = './blogs/titles/title' . $x . '.php';
+	echo '<a href="./blogs/titles/title' . $x . '.php"><p>Blog ' . $x . '</p></a>';
 }
 ?>
 <a href="oldnews.php"><p>Old News</p></a>
