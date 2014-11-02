@@ -51,7 +51,7 @@
 <br />
 
 <section>
-<h2>News</h2>
+<h2>Old News</h2>
 <?php
 $filename = './blogs/titles/title0.php';
 $x = 0;
@@ -61,7 +61,9 @@ while (file_exists($filename)) {
 }
 for ($x-=1; $x>=0; $x--) {
 	$filename = './blogs/titles/title' . $x . '.php';
-	echo '<a href="./blogs/titles/title' . $x . '.php"><p>Blog ' . $x . '</p></a>';
+	echo '<a href="./blogpages/blog' . $x . '.php"><p>';
+	include $filename;
+	echo '</p></a>';
 }
 ?>
 <a href="oldnews.php"><p>Old News</p></a>
